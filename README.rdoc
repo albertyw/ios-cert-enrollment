@@ -1,5 +1,7 @@
 = ios-cert-enrollment
 
+Original repo forked from https://github.com/nolanbrown/ios-cert-enrollment
+
 Sign and distribute iOS Enrollment certificates using your server's SSL Certificate
 
 == Usage
@@ -12,5 +14,6 @@ See the example-server directory for usage including available parameters. It ca
 
 == Copyright
 
-Copyright (c) 2012 Nolan B.. See LICENSE for further details.
+Original repo forked from https://github.com/nolanbrown/ios-cert-enrollment
 
+Modifications: (c) Cellabus, Inc.
