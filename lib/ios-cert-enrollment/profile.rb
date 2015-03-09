@@ -1,6 +1,6 @@
 require File.expand_path('../configuration', __FILE__)
 require "rubygems"
-require "uuidtools"
+require "securerandom"
 require "plist"
 module IOSCertEnrollment
   class Profile
@@ -126,7 +126,7 @@ module IOSCertEnrollment
         payload_content = Hash.new
         payload_content['URL'] = self.url
         payload_content['Subject'] = [ [ [ "O", self.organization ] ],
-            [ [ "CN", purpose + " (" + UUIDTools::UUID.random_create().to_s + ")" ] ] ];
+            [ [ "CN", purpose + " (" + SecureRandom.uuid + ")" ] ] ];
 
         payload_content['Keysize'] = 1024
         payload_content['Key Type'] = "RSA"
@@ -140,7 +140,7 @@ module IOSCertEnrollment
     def general_payload()
         payload = Hash.new
         payload['PayloadVersion'] = 1 # do not modify
-        payload['PayloadUUID'] = UUIDTools::UUID.random_create().to_s # should be unique
+        payload['PayloadUUID'] = SecureRandom.uuid # should be unique
         payload['PayloadOrganization'] = self.organization
         payload
     end
