@@ -1,6 +1,6 @@
 # Ensure we require the local version and not one we might have installed already
-require File.join([File.dirname(__FILE__),'lib','ios-cert-enrollment.rb'])
-spec = Gem::Specification.new do |s| 
+#require File.join([File.dirname(__FILE__),'lib','ios-cert-enrollment.rb'])
+spec = Gem::Specification.new do |s|
   s.name = 'ios-cert-enrollment'
   s.version = "0.0.8"
   s.author = 'Nolan Brown'
@@ -9,7 +9,7 @@ spec = Gem::Specification.new do |s|
   s.platform = Gem::Platform::RUBY
   s.summary = 'SCEP server for iOS Configuration Profiles'
   s.description = 'Easy tools to implement a SCEP server for iOS Configuration Profiles'
-# Add your other files here if you make them
+  # Add your other files here if you make them
   s.files = %w(
 lib/ios-cert-enrollment.rb
 lib/ios-cert-enrollment/certificate.rb

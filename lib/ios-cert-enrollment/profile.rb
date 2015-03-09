@@ -14,7 +14,7 @@ module IOSCertEnrollment
       self.expiration = nil
       self.icon = nil
     end
-    
+
     def service
         payload = general_payload()
         payload['PayloadType'] = "Profile Service" # do not modify
@@ -25,16 +25,15 @@ module IOSCertEnrollment
         payload['PayloadDescription'] = self.description
 
         payload_content = Hash.new
-	      payload_content['URL'] = self.url
+        payload_content['URL'] = self.url
         payload_content['DeviceAttributes'] = [
-            "UDID", 
-            "VERSION",
-            "PRODUCT",              # ie. iPhone1,1 or iPod2,1
-            "DEVICE_NAME",          # given device name "My iPhone"
-            "MAC_ADDRESS_EN0",
-            "IMEI",
-            "ICCID" 
-            ];
+          "UDID",
+          "VERSION",
+          "PRODUCT",
+          "SERIAL",
+          "MEID",
+          "IMEI"
+        ];
 
         payload['PayloadContent'] = payload_content
         self.payload = Plist::Emit.dump(payload)
@@ -65,18 +64,18 @@ module IOSCertEnrollment
         content_payload['PayloadType'] = "com.apple.webClip.managed" # do not modify
 
         # strings that show up in UI, customisable
-        content_payload['PayloadDisplayName'] = self.display_name 
+        content_payload['PayloadDisplayName'] = self.display_name
         content_payload['PayloadDescription'] = self.description
 
         # allow user to remove webclip
         content_payload['IsRemovable'] = true
         content_payload['Precomposed'] = true
-        
+
         content_payload['Icon'] = self.icon if self.icon
         # the link
-        content_payload['Label'] = self.label 
+        content_payload['Label'] = self.label
         content_payload['URL'] = self.url
-        
+
         self.payload = Plist::Emit.dump([content_payload])
         return self
     end
@@ -97,21 +96,21 @@ module IOSCertEnrollment
         self.payload = Plist::Emit.dump(payload)
         return self
     end
-    
-    
+
+
     def sign
       signed_profile = OpenSSL::PKCS7.sign(SSL.certificate, SSL.key,  self.payload, [], OpenSSL::PKCS7::BINARY)
-      return Certificate.new(signed_profile.to_der, "application/x-apple-aspen-config")        
-      
+      return Certificate.new(signed_profile.to_der, "application/x-apple-aspen-config")
+
     end
-    
+
     def encrypt(certificates)
       encrypted_profile = OpenSSL::PKCS7.encrypt(certificates, self.payload, OpenSSL::Cipher::Cipher::new("des-ede3-cbc"), OpenSSL::PKCS7::BINARY)
-      return Certificate.new(encrypted_profile.to_der, "application/x-apple-aspen-config")        
-      
+      return Certificate.new(encrypted_profile.to_der, "application/x-apple-aspen-config")
+
     end
-    
-    
+
+
     private
     def encryption_cert_request(purpose)
         ## AKA scep_cert_payload
@@ -126,7 +125,7 @@ module IOSCertEnrollment
 
         payload_content = Hash.new
         payload_content['URL'] = self.url
-        payload_content['Subject'] = [ [ [ "O", self.organization ] ], 
+        payload_content['Subject'] = [ [ [ "O", self.organization ] ],
             [ [ "CN", purpose + " (" + UUIDTools::UUID.random_create().to_s + ")" ] ] ];
 
         payload_content['Keysize'] = 1024
@@ -137,7 +136,7 @@ module IOSCertEnrollment
         payload['PayloadContent'] = payload_content;
         payload
     end
-    
+
     def general_payload()
         payload = Hash.new
         payload['PayloadVersion'] = 1 # do not modify
