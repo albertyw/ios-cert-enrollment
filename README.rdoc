@@ -8,10 +8,6 @@ Sign and distribute iOS Enrollment certificates using your server's SSL Certific
 
 See the example-server directory for usage including available parameters. It can't be run out of the box and requires a SSL certificate.
 
-    TODO: Write SSL generation script
-    TODO: Write implementation instructions
-    TODO: Write tests
-
 == Copyright
 
 Original repo forked from https://github.com/nolanbrown/ios-cert-enrollment
