@@ -1,5 +1,7 @@
 = ios-cert-enrollment
 
+{<img alt="Status?branch=master" src="https://codeship.com/projects/4e6f1ee0-a9c6-0132-2335-46f09a3a7fb9/status?branch=master" />}[https://codeship.com/projects/67803]
+
 Original repo forked from https://github.com/nolanbrown/ios-cert-enrollment
 
 Sign and distribute iOS Enrollment certificates using your server's SSL Certificate
