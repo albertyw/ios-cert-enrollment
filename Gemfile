@@ -4,5 +4,5 @@ gem "uuidtools"
 gem "bundler"
 
 group :test, :development do
-  gem 'rspec'
+  gem 'rspec', '~> 3.1'
 end

@@ -11,7 +11,7 @@ describe IOSCertEnrollment::Configuration do
       expect(IOSCertEnrollment.ssl_key).to eq 'asdf'
     end
     it "Can read from a file" do
-      File.stub(:read).and_return('qwer')
+      allow(File).to receive(:read).and_return('qwer')
       IOSCertEnrollment.ssl_key_path = 'qwer_file'
       expect(IOSCertEnrollment.ssl_key).to eq 'qwer'
     end
@@ -27,7 +27,7 @@ describe IOSCertEnrollment::Configuration do
       expect(IOSCertEnrollment.ssl_certificate).to eq 'asdf'
     end
     it "Can read from a file" do
-      File.stub(:read).and_return('qwer')
+      allow(File).to receive(:read).and_return('qwer')
       IOSCertEnrollment.ssl_certificate_path = 'qwer_file'
       expect(IOSCertEnrollment.ssl_certificate).to eq 'qwer'
     end
