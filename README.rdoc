@@ -2,6 +2,7 @@
 
 {<img alt="Status?branch=master" src="https://codeship.com/projects/4e6f1ee0-a9c6-0132-2335-46f09a3a7fb9/status?branch=master" />}[https://codeship.com/projects/67803]
 {<img src="https://codeclimate.com/github/cellabus/ios-cert-enrollment/badges/gpa.svg" />}[https://codeclimate.com/github/cellabus/ios-cert-enrollment]
+{<img src="https://codeclimate.com/github/cellabus/ios-cert-enrollment/badges/coverage.svg" />}[https://codeclimate.com/github/cellabus/ios-cert-enrollment]
 
 Original repo forked from https://github.com/nolanbrown/ios-cert-enrollment
 

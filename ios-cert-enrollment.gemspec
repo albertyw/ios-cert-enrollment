@@ -26,5 +26,6 @@ lib/ios-cert-enrollment/version.rb
   s.add_development_dependency('rake')
   s.add_development_dependency('rdoc')
   s.add_development_dependency('rspec')
+  s.add_development_dependency('codeclimate-test-reporter')
   s.add_runtime_dependency('plist')
 end
