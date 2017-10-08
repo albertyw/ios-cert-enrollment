@@ -1,9 +1,9 @@
 = ios-cert-enrollment
 
 {<img src="https://app.codeship.com/projects/5fbd5ef0-8de5-0135-0897-5a65ff81d7de/status?branch=master" alt="Status?branch=master" />}[https://app.codeship.com/projects/249724]
-{<img src="https://gemnasium.com/cellabus/ios-cert-enrollment.svg" alt="Dependency Status" />}[https://gemnasium.com/cellabus/ios-cert-enrollment]
-{<img src="https://codeclimate.com/github/cellabus/ios-cert-enrollment/badges/gpa.svg" />}[https://codeclimate.com/github/cellabus/ios-cert-enrollment]
-{<img src="https://codeclimate.com/github/cellabus/ios-cert-enrollment/badges/coverage.svg" />}[https://codeclimate.com/github/cellabus/ios-cert-enrollment]
+{<img src="https://gemnasium.com/albertyw/ios-cert-enrollment.svg" alt="Dependency Status" />}[https://gemnasium.com/albertyw/ios-cert-enrollment]
+{<img src="https://codeclimate.com/github/albertyw/ios-cert-enrollment/badges/gpa.svg" />}[https://codeclimate.com/github/albertyw/ios-cert-enrollment]
+{<img src="https://codeclimate.com/github/albertyw/ios-cert-enrollment/badges/coverage.svg" />}[https://codeclimate.com/github/albertyw/ios-cert-enrollment]
 
 Original repo forked from https://github.com/nolanbrown/ios-cert-enrollment
 
