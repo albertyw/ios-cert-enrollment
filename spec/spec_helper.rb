@@ -7,7 +7,7 @@ Bundler.setup
 require 'ios-cert-enrollment'
 
 
-# See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+# See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true

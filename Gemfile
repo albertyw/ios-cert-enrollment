@@ -1,4 +1,4 @@
-source "http://rubygems.org"
+source "https://rubygems.org"
 
 # Use gemspec depdendencies
 gemspec
