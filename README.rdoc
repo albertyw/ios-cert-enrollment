@@ -1,7 +1,6 @@
 = ios-cert-enrollment
 
 {<img src="https://drone.albertyw.com/api/badges/albertyw/ios-cert-enrollment/status.svg" alt="Build Status" />}[https://drone.albertyw.com/albertyw/ios-cert-enrollment]
-{<img src="https://gemnasium.com/albertyw/ios-cert-enrollment.svg" alt="Dependency Status" />}[https://gemnasium.com/albertyw/ios-cert-enrollment]
 {<img src="https://codeclimate.com/github/albertyw/ios-cert-enrollment/badges/gpa.svg" />}[https://codeclimate.com/github/albertyw/ios-cert-enrollment]
 {<img src="https://codeclimate.com/github/albertyw/ios-cert-enrollment/badges/coverage.svg" />}[https://codeclimate.com/github/albertyw/ios-cert-enrollment]
 
