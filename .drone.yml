@@ -1,0 +1,16 @@
+kind: pipeline
+type: docker
+name: test
+
+steps:
+  - name: Test Ruby
+    image: ruby:3.0.1
+    commands:
+      - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > "${HOME}/bin/cc-test-reporter"
+      - chmod +x "${HOME}/bin/cc-test-reporter"
+      - bundle install
+      - cc-test-reporter before-build
+      - rspec
+      - cc-test-reporter after-build --exit-code $?
+    environment:
+      CC_TEST_REPORTER_ID: c07c90d2a436bad779570606bc9afa4f8f0bff59ac251b449ea9a853a6ac4402
